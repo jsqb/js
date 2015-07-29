@@ -423,10 +423,10 @@
 
 var debug = function(message, isHtml) {
 	var d = document.createElement("div");
-	if (isHtml === false) {
-		d.appendChild(document.createTextNode(message));
-	} else {
+	if (isHtml === true) {
 		d.innerHTML = message;
+	} else {
+		d.appendChild(document.createTextNode(message));
 	}
 	document.body.appendChild(d);
 };
